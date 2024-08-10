@@ -57,6 +57,7 @@ const i18n = {
     'message.empty.tips': 'No Content',
     'message.lang.tips': 'Language switch to ',
     'navbar.search.placeholder': 'Please search',
+    'menu.dashboard.file': 'file manager',
   },
   'zh-CN': {
     'menu.dashboard': '仪表盘',
@@ -76,6 +77,7 @@ const i18n = {
     'menu.result.error': '失败页',
     'menu.form.group': '分组表单',
     'menu.dashboard.monitor': '实时监控',
+    'menu.dashboard.file': '文件管理',
     'menu.visualization.multiDimensionDataAnalysis': '多维数据分析',
     'menu.list.searchTable': '查询表格',
     'menu.form.step': '分步表单',

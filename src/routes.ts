@@ -27,6 +27,10 @@ export const routes: IRoute[] = [
           { resource: 'menu.dashboard.monitor', actions: ['write'] },
         ],
       },
+      {
+        name: 'menu.dashboard.file',
+        key: 'dashboard/file',
+      },
     ],
   },
   {
