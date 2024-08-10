@@ -43,7 +43,7 @@ export default function LoginForm() {
     setErrorMessage('');
     setLoading(true);
     axios
-      .post('api.dooocs.com/api/user/login', params)
+      .post('/api/user/login', params)
       .then((res) => {
         const { status, msg } = res.data;
         if (status === 'ok') {
