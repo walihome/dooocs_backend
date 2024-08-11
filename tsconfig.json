@@ -18,8 +18,17 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "rootDirs": ["common/src/", "arco-design-pro-cra/src/", "arco-design-pro-next/src/"]
+    "rootDirs": [
+      "common/src/",
+      "arco-design-pro-cra/src/",
+      "arco-design-pro-next/src/"
+    ]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/api/users/login.js",
+    "src/pages/api/file/upload.js"
+  ],
   "exclude": ["node_modules"]
 }
