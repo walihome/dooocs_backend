@@ -2,40 +2,31 @@ import React, { useState } from 'react';
 import { Upload, Message, Button, UploadProps } from '@arco-design/web-react';
 import { IconUpload } from '@arco-design/web-react/icon';
 
-export default function Monitor() {
-  const [fileList, setFileList] = useState([]);
-
-  const handleFileChange = (fileList) => {
-    setFileList(fileList);
-  };
-
-  const handleUploadSuccess = () => {
-    Message.success('上传成功');
-    setFileList([]); // 清空列表
-  };
-
-  const handleUploadError = () => {
-    Message.error('上传失败，请重试');
-  };
-
-  const uploadProps: UploadProps = {
-    action: 'https://admin.tabmanager.cn/api/file/upload',
-    listType: 'picture-card',
-    multiple: true,
-    fileList,
-    onChange: handleFileChange,
-    onSuccess: handleUploadSuccess,
-    onError: handleUploadError,
-  };
-
+const App = () => {
   return (
     <div>
-      <h1>图片批量上传</h1>
-      <Upload {...uploadProps}>
-        <Button icon={<IconUpload />} type="primary">
-          点击上传图片
-        </Button>
-      </Upload>
+      <Upload
+        multiple
+        defaultFileList={[
+          {
+            uid: '-2',
+            name: '20200717-103937.png',
+            url: '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp',
+          },
+          {
+            uid: '-1',
+            name: 'hahhahahahaha.png',
+            url: '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/e278888093bef8910e829486fb45dd69.png~tplv-uwbnlip3yd-webp.webp',
+          },
+        ]}
+        action="/upload/image"
+        listType="picture-card"
+        onPreview={(file) => {
+          Message.info('click preview icon');
+        }}
+      />
     </div>
   );
-}
+};
+
+export default App;
